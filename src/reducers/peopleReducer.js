@@ -5,6 +5,7 @@ import {
 } from '../actions/peopleActions';
 
 
+
 const initialState = {
   isFetching: false,
   people: [],

@@ -58,7 +58,7 @@ export const getInitialPeople = () => {
       })
       .catch(err => {
         // log error
-        console.log(err);
+        dispatch(fetchingPeopleError(err));
       });
   }
 };

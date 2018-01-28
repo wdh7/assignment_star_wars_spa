@@ -37,9 +37,9 @@ class PeopleContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    isFetching: state.isFetching,
-    people: state.people,
-    error: state.error
+    isFetching: state.people.isFetching,
+    people: state.people.people,
+    error: state.people.error
   };
 };
 
