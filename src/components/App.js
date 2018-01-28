@@ -4,8 +4,7 @@ import Home from './Home';
 import Header from './Header';
 import PeopleContainer from '../containers/PeopleContainer';
 import PlanetsContainer from '../containers/PlanetsContainer';
-
-// <Route path='/vehicles' component={VehiclesContainer} />
+import VehiclesContainer from '../containers/VehiclesContainer';
 
 
 class App extends Component {
@@ -19,6 +18,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/people' component={PeopleContainer} />
             <Route path='/planets' component={PlanetsContainer} />
+            <Route path='/vehicles' component={VehiclesContainer} />
             <Route render={() => <h3>Page Not Found</h3>} />
           </Switch>
         </div>
