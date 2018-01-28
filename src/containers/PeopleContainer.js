@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getInitialPeople } from '../actions/peopleActions';
+import PersonCard from '../components/PersonCard';
 
 class PeopleContainer extends Component {
   componentDidMount() {
@@ -16,11 +17,19 @@ class PeopleContainer extends Component {
     }
 
     if (error) {
-      return <p>Error...</p>
+      return <p>{error}</p>
     }
 
     if (people) {
-      return <p>{ JSON.stringify(people, null, 2) }</p>
+      return (
+        <div className='cards'>
+          <ul>
+            {people.map(person => {
+              return <PersonCard person={person} key={person.name}/>
+            })}
+          </ul>
+        </div>
+      )
     }
 
   }

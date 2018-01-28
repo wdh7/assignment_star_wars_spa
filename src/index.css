@@ -24,3 +24,28 @@ header {
   color: red;
   font-weight: bold;
 }
+
+.cards {
+  width: 100%;
+}
+
+.cards ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 30%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card h4 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
