@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './elements/Button';
 
 const PlanetCard = ({planet}) => {
   return (
@@ -7,6 +8,7 @@ const PlanetCard = ({planet}) => {
       <p>Population: {planet.population}</p>
       <p>Terrain: {planet.terrain}</p>
       <p>Climate: {planet.climate}</p>
+      <Button resource='planets' name={planet.name}>View Details</Button>
     </div>
   )
 };

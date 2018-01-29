@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './elements/Button';
 
 const VehicleCard = ({vehicle}) => {
   return (
@@ -8,6 +9,7 @@ const VehicleCard = ({vehicle}) => {
       <p>Manufacturer: {vehicle.manufacturer}</p>
       <p># Passengers: {vehicle.passengers}</p>
       <p>Class: {vehicle.vehicle_class}</p>
+      <Button resource='vehicles' name={vehicle.name}>View Details</Button>
     </div>
   )
 };

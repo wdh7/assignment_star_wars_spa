@@ -10,6 +10,11 @@ import App from './components/App';
 import rootReducer from './reducers/rootReducer';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
+const unsubscribe = store.subscribe(() => {
+  console.log(store.getState());
+});
+
+
 
 ReactDOM.render(
   <Provider store={store}>
